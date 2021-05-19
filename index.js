@@ -1,9 +1,8 @@
-const express = require('express')
+const customExpress = require('./config/customExpress')
 
-const app = express()
+const appo = customExpress()
 
-app.listen(3000, () => console.log('servidor rodando na porta 3000'))
 
-app.get('/', (req, res) => res.send('Servidor rodando, tudo ok'))
+appo.listen(3000, () => console.log('servidor rodando na porta 3000'))
 
-app.get('/atendimentos', (req, res) => res.send('Voce está na rota Atendimentos'))
+appo.get('/', (req, res) => res.send('Servidor rodando, tudo ok'))
